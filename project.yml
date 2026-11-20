@@ -1,0 +1,33 @@
+name: SuperKid
+options:
+  deploymentTarget:
+    iOS: "17.0"
+targets:
+  SuperKid:
+    type: application
+    platform: iOS
+    sources:
+      - path: SuperKid
+        type: syncedFolder
+        excludes:
+          - Info.plist
+    info:
+      path: SuperKid/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UIRequiresFullScreen: true
+        NSCameraUsageDescription: To see the room and place practice objects in AR.
+        NSMicrophoneUsageDescription: To hear your shout and practice call.
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.superkid.HomeMission
+        TARGETED_DEVICE_FAMILY: "2"
+        SWIFT_VERSION: "5.0"
+schemes:
+  SuperKid:
+    build:
+      targets:
+        SuperKid: all
